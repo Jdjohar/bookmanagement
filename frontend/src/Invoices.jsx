@@ -9,7 +9,7 @@ const Invoices = () => {
   // Fetch Paid Invoices
   const fetchInvoices = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/admin/invoices');
+      const response = await fetch('https://bookmanagement-yjoe.onrender.com/api/admin/invoices');
       const data = await response.json();
       setInvoices(data);
     } catch (error) {

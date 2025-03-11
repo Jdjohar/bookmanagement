@@ -9,7 +9,7 @@ const UnpaidOrders = () => {
   // Fetch unpaid orders
   const fetchUnpaidOrders = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/orders/unpaid');
+      const response = await fetch('https://bookmanagement-yjoe.onrender.com/api/orders/unpaid');
       const data = await response.json();
       setUnpaidOrders(data);
     } catch (error) {
@@ -20,7 +20,7 @@ const UnpaidOrders = () => {
   // Mark an order as Paid
   const markAsPaid = async (orderId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${orderId}/pay`, {
+      const response = await fetch(`https://bookmanagement-yjoe.onrender.com/api/orders/${orderId}/pay`, {
         method: 'PUT',
       });
 

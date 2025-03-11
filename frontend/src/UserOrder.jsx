@@ -24,8 +24,8 @@ const UserOrder = () => {
   // Fetch sections and books from backend
   const fetchSectionsAndBooks = async () => {
     try {
-      const sectionRes = await fetch('http://localhost:5000/api/sections');
-      const bookRes = await fetch('http://localhost:5000/api/books');
+      const sectionRes = await fetch('https://bookmanagement-yjoe.onrender.com/api/sections');
+      const bookRes = await fetch('https://bookmanagement-yjoe.onrender.com/api/books');
 
       const sectionData = await sectionRes.json();
       const bookData = await bookRes.json();
@@ -85,7 +85,7 @@ const UserOrder = () => {
         })),
       };
 
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch('https://bookmanagement-yjoe.onrender.com/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(orderData),

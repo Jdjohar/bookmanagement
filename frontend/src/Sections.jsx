@@ -8,7 +8,7 @@ const Sections = () => {
   const [description, setDescription] = useState('');
 
   const fetchSections = async () => {
-    const response = await fetch('http://localhost:5000/api/sections');
+    const response = await fetch('https://bookmanagement-yjoe.onrender.com/api/sections');
     const data = await response.json();
     setSections(data);
   };
@@ -19,7 +19,7 @@ const Sections = () => {
 
   const addSection = async (e) => {
     e.preventDefault();
-    await fetch('http://localhost:5000/api/sections', {
+    await fetch('https://bookmanagement-yjoe.onrender.com/api/sections', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, description }),
