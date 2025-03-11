@@ -159,7 +159,7 @@ const UserOrder = () => {
                     checked={selectedBooks.some((b) => b._id === book._id)}
                     onChange={() => toggleBookSelection(book)}
                   />
-                  {book.name} - ${book.price}
+                  {book.name} - Rs.{book.price}
                 </label>
               </div>
             ))
