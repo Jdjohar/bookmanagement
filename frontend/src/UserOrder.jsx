@@ -174,7 +174,7 @@ const UserOrder = () => {
             <ul>
               {selectedBooks.map((book) => (
                 <li key={book._id}>
-                  {book.name} - ${book.price}
+                  {book.name} - Rs.{book.price}
                 </li>
               ))}
             </ul>
